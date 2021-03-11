@@ -14,9 +14,4 @@ $setFromEmail = 'setFromEmail';
 $setFromName = 'setFromName';
 
 $novoEmail = new Notification\Email(SMTP::DEBUG_SERVER, $host, $user, $pass, $smtpSecure, $port, $setFromEmail, $setFromName);
-$novoEmail->sendMail('subject', 'body', 'email-reply', 'name-reply', 'email-to', 'name-to');
-
-
-
-
-
+$novoEmail->sendEmail("Subject", "Content", "reply@email.com", "Replay Name", "address@email.com", "Address Name");
