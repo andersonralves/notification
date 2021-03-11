@@ -11,8 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "phpmailer/phpmailer": "6.3.0",
-        "symfony/var-dumper": "5.x-dev"
+        "phpmailer/phpmailer": "6.3.0"
     },
     "config": {
         "vendor-dir": "ext_lib"
