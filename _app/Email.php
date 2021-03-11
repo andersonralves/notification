@@ -10,21 +10,21 @@ class Email
 {
     private $mail = \stdClass::class;
 
-    public function __construct() 
+    public function __construct($smtpDebug, $host, $user, $pass, $smtpSecure, $port, $setFromEmail, $setFromName) 
     {
         $this->mail = new PHPMailer(true);
-        $this->mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-        $this->mail->isSMTP();                                          //Send using SMTP
-        $this->mail->Host       = 'host';                     //Set the SMTP server to send through
-        $this->mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-        $this->mail->Username   = 'username';                     //SMTP username
-        $this->mail->Password   = 'password';                               //SMTP password
-        $this->mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $this->mail->Port       = 587;    
+        $this->mail->SMTPDebug = $smtpDebug;                      //Enable verbose debug output
+        $this->mail->isSMTP();                                    //Send using SMTP
+        $this->mail->Host       = $host;                          //Set the SMTP server to send through
+        $this->mail->SMTPAuth   = true;                           //Enable SMTP authentication
+        $this->mail->Username   = $user;                          //SMTP username
+        $this->mail->Password   = $pass;                          //SMTP password
+        $this->mail->SMTPSecure = $smtpSecure;                    //Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
+        $this->mail->Port       = $port;    
         $this->mail->isHTML(true);
         $this->mail->CharSet = 'utf-8';
         $this->mail->setLanguage('br');
-        $this->mail->setFrom('email-from', 'name-from');
+        $this->mail->setFrom($setFromEmail, $setFromName);
     }
 
     public function sendMail(string $subject, string $body, string $replyEmail, string $replyName, string $addressEmail, string $addressName)
