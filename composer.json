@@ -1,0 +1,25 @@
+{
+    "name": "andersonralves/notification",
+    "description": "This is a library that use composer as the basis for generating email notifications",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anderson Alves",
+            "email": "andersonricardo.alves@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "phpmailer/phpmailer": "6.3.0",
+        "symfony/var-dumper": "5.x-dev"
+    },
+    "config": {
+        "vendor-dir": "ext_lib"
+    },
+    "autoload": {
+        "psr-4": {
+            "Notification\\": "_app"
+        }
+    }
+}
