@@ -5,7 +5,7 @@ This library has the function of sending e-mail using the phpmailer library. Doi
 To install the library, run the following command:
 
 ```sh
-composer require gustavoweb / composer_teste
+composer require andersonralves/notification
 ```
 
 To use the library, simply require the composer to autoload, invoke the class and call the method:
@@ -25,9 +25,7 @@ $email->sendEmail("SUbject", "Content", "reply@email.com", "Replay Name", "addre
 Note that the entire configuration of sending the e-mail is using the magic method builder! Once the builder method has been invoked within your application, your system will be able to take the shots.
 
 ### Developers
-* [Gustavo Web] - Developer of this library and tutor of the Composer na Prática course!
-* [Robson V. Leite] - CEO and Founder UpInside Training
-* [UpInside Treinamentos] - Official website of your school of programming and digital marketing
+* [Anderson Alves] - Developer of this library!
 * [phpMailer] - Lib to send E-mail
 
 License
@@ -35,10 +33,5 @@ License
 
 MIT
 
-** Another UpInside Training course, make good use of it! **
-
 [//]: #
-[Gustavo Web]: <mailto: gustavo@upinside.com.br>
-[Robson V. Leite]: <mailto: robson@upinside.com.br>
-[UpInside Treinamentos]: <https://www.upinside.com.br>
-[phpMailer]: <https://github.com/PHPMailer/PHPMailer>
+[Anderson Alves]: <mailto: andersonricardo.alves@gmail.com>
